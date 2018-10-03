@@ -12,6 +12,7 @@ public class Crawler {
         this.proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(ipAddress, port));
     }
 
+
     public synchronized Document getDocument(String url) {
         boolean recon = true;
         Document d = null;
@@ -43,5 +44,9 @@ public class Crawler {
             workingDirectory += "/Library/Application Support";
         }
         return workingDirectory+"/Crawlerling/";
+    }
+
+    public static void main(String[] args) {
+        System.out.println("This is something");
     }
 }
